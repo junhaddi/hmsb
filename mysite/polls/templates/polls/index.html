@@ -1,12 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-  </head>
-  <body>
-    <h1>인덱스 기모띠</h1>
-  </body>
+    <style type="text/css">
+        @font-face { font-family: 'NanumGothic';
+            src: url('/fonts/NanumGothic.eot');}
+        @font-face {
+            src: url("./fonts/Myriad-Pro_31655.ttf");
+            font-family:"Myriad";}
+    </style>
+</head>
+<body>
+    <h1 style="font-family: 'Myriad'">당신의 이름을 입력해주세요</h1>
+    <br>
+    <form style="font-family: 'NanumGothic'">
+        <label id="namelabel">이름 : </label><input value="홍길동" type="text" name="Uname placeholder="이름을 입력해주세요" id="_namelabel"> <br><br>
+    </form>
+    <br>
+
+    <h1 style="font-family: 'Myriad'">당신의 아들의 정보를 입력해주세요</h1>
+    <h5>특정 생일을 입력하시면 이스터에그가 있습니다</h3>
+    <br>
+    <form style="font-family: 'NanumGothic'">
+        <label id="birthlabel">생일 : <input type="date" name = "Cbirthday"><br><br>
+        <label id="genderlablel">성별 : </label> <input type="radio" name="gender" value="남자">남자 <input type="radio" name="gender" value="여자">여자 <br><br>
+    </form>
+    <br>
+    <button type="button" name = "Cbutton" onclick="buttonClick()">확인</button>
+    <br>
+    <br>
+
+    <div id="mySexyBabyName">
+
+    <script>
+        var man = ["제임스", "존", "로버트", "마이클", "윌리엄", "데이비드", "리차드", "조세프", "찰스", "토마스", "크리스토퍼", "다니엘", "메튜", "도날드", "폴", "마크", "안토니", "조지", "스티븐", "케니", "에드워드", "앤드류", "브라이언", "케빈", "조쉬"]; 
+        var women = ["매리", "패트리샤", "제니퍼", "엘리자베스", "린다", "발버라", "마가렛", "수잔", "도로시", "제시카", "베티", "사라", "낸시", "래컨", "리사", "헬렌", "샌드라", "도나", "캐롤", "킴벌리", "애슐리", "미셸", "아만다", "로라", "멜리사"];
+
+        function buttonClick() {
+            var name = ""
+            name += document.getElementById("_namelabel").value[0] + " ";
+
+            for (var i = 0; i < 5; i++) {
+                if (document.getElementsByName("gender")[0].checked) {
+                    // 남자
+                    name += man[Math.floor(Math.random() * man.length)] + " ";
+                } else if (document.getElementsByName("gender")[1].checked) {
+                    // 여자
+                    name += women[Math.floor(Math.random() * women.length)] + " ";
+                }
+                else {
+                    // 중성
+                    if (Math.floor(Math.random() * 2) == 1) {
+                        name += man[Math.floor(Math.random() * man.length)] + " ";
+                    } else {
+                        name += women[Math.floor(Math.random() * women.length)] + " ";
+                    }
+                }
+            }
+            document.getElementById("mySexyBabyName").innerHTML = "<h1>당신의 아기 이름은</h1><br>" + name;
+        }
+    </script>
+</body>
 </html>
