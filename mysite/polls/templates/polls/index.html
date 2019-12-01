@@ -14,6 +14,11 @@
     </style>
 </head>
 <body>
+    <!-- db데이터 가져오기 -->
+        {% for name in latest_name_list %}
+            <h2>{{name.name}}</h2>
+        {% endfor %}
+    
     <h1 style="font-family: 'Myriad'">당신의 이름을 입력해주세요</h1>
     <br>
     <form style="font-family: 'NanumGothic'">
