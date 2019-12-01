@@ -14,22 +14,23 @@
     </style>
 </head>
 <body>
-    <h1 style="font-family: 'Myriad'">당신의 이름을 입력해주세요</h1>
+    <h1 align="center" style="color: pink; font-size: 6em; background: red;">HOT MY SEXY BABY</h1>
+    <h2 style="font-family: 'Myriad'">당신의 이름을 입력해주세요</h2>
     <br>
     <form style="font-family: 'NanumGothic'">
         <label id="namelabel">이름 : </label><input value="홍길동" type="text" name="Uname placeholder="이름을 입력해주세요" id="_namelabel"> <br><br>
     </form>
     <br>
 
-    <h1 style="font-family: 'Myriad'">당신의 아들의 정보를 입력해주세요</h1>
-    <h5>특정 생일을 입력하시면 이스터에그가 있습니다</h3>
+    <h2 style="font-family: 'Myriad'">당신의 아이 정보를 입력해주세요</h2>
+    <h5>*특정 생일을 입력하시면 이스터에그가 있습니다</h3>
     <br>
     <form style="font-family: 'NanumGothic'">
         <label id="birthlabel">생일 : <input type="date" name = "Cbirthday"><br><br>
         <label id="genderlablel">성별 : </label> <input type="radio" name="gender" value="남자">남자 <input type="radio" name="gender" value="여자">여자 <br><br>
     </form>
     <br>
-    <button type="button" name = "Cbutton" onclick="buttonClick()">확인</button>
+    <button style="display: block; margin: 0 auto; width: 600px; height: 80px; font-size: 40px;" type="button" name = "Cbutton" onclick="buttonClick()">☆이☆름☆짓☆기☆</button>
     <br>
     <br>
 
@@ -60,7 +61,7 @@
                     }
                 }
             }
-            document.getElementById("mySexyBabyName").innerHTML = "<h1>당신의 아기 이름은</h1><br>" + name;
+            document.getElementById("mySexyBabyName").innerHTML = "<h2 align='center' style='font-size: 64px'>당신의 아기 이름은...</h2><br>" + "<p align='center' style='font-size: 32px'>" + name + "</p><br>";
         }
     </script>
 </body>
