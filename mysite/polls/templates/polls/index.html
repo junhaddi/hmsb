@@ -14,15 +14,12 @@
     </style>
 </head>
 <body>
-    <!-- db데이터 가져오기 -->
-        {% for name in latest_name_list %}
-            <h2>{{name.name}}</h2>
-        {% endfor %}
+    <h1 align="center" style="color: pink; font-size: 6em; background: red;">HOT MY SEXY BABY</h1>
     
     <h1 style="font-family: 'Myriad'">당신의 이름을 입력해주세요</h1>
     <br>
     <form style="font-family: 'NanumGothic'">
-        <label id="namelabel">이름 : </label><input value="홍길동" type="text" name="Uname placeholder="이름을 입력해주세요" id="_namelabel"> <br><br>
+        <label id="namelabel">이름 : </label><input value="홍길동" type="text" name="Uname" placeholder="이름을 입력해주세요" id="_namelabel"> <br><br>
     </form>
     <br>
 
@@ -39,6 +36,10 @@
     <br>
 
     <div id="mySexyBabyName">
+    <h2 align = "right">[개발진]</h2>
+    {% for name in latest_name_list %}
+        <h2 align="right">{{name.name}}</h2>
+    {% endfor %}
 
     <script>
         var man = ["제임스", "존", "로버트", "마이클", "윌리엄", "데이비드", "리차드", "조세프", "찰스", "토마스", "크리스토퍼", "다니엘", "메튜", "도날드", "폴", "마크", "안토니", "조지", "스티븐", "케니", "에드워드", "앤드류", "브라이언", "케빈", "조쉬"]; 
